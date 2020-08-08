@@ -5,6 +5,7 @@ import ViewPager from '@react-native-community/viewpager';
 import MainPage from './components/MainPage.js'
 import FirstPage from './components/FirstPage.js';
 import NavBar from './components/NavBar.js'
+import SecondPage from './components/SecondPage.js'
 
 showPageIndicator: true
 export default function App() {
@@ -18,7 +19,7 @@ export default function App() {
         <FirstPage/>
       </View>
       <View key="2">
-        <Text>Second page</Text>
+        <SecondPage/>
       </View>
     </ViewPager>
     </View>

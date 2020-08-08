@@ -59,6 +59,7 @@ const styles = StyleSheet.create({
   content: {
     flex: 1,
     margin: 25,
+    marginTop: 10,
     // backgroundColor: 'blue'
   },
   h1: {

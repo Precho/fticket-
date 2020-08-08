@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, Button, ImageBackground } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import NAVNEW from '../assets/NAVNEW.png';
 
-const navBarImage =  '../assets/NAVNEW.png';
+
 class NavBar extends React.Component {
   render() {
     return (

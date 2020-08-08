@@ -1,8 +1,8 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-class FirstPage extends React.Component {
-  render() {
+function FirstPage() {
+  
     return (
     <View style={styles.container}>
       <View style={styles.card}>
@@ -13,7 +13,7 @@ class FirstPage extends React.Component {
       
       );
 }
-}
+
 
 const styles = StyleSheet.create({
   container: {

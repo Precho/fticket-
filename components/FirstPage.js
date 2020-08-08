@@ -6,7 +6,7 @@ class FirstPage extends React.Component {
     return (
     <View style={styles.container}>
       <View style={styles.card}>
-
+      
       </View>
     </View>
       

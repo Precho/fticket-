@@ -1,8 +1,8 @@
 1.**Clone the repo**
 
 ```
-$ git clone git@github.com:Precho/fticket.git
-$ cd todo
+$ git clone git@github.com:Precho/fticket-.git
+$ cd fticket-
 ```
 2.**Install dependencies**
 

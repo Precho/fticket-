@@ -6,6 +6,7 @@ import MainPage from './components/MainPage.js'
 import FirstPage from './components/FirstPage.js';
 import NavBar from './components/NavBar.js'
 import SecondPage from './components/SecondPage.js'
+import ZtpLogo from './components/ZtpLogo.js'
 
 showPageIndicator: true
 export default function App() {
@@ -13,7 +14,8 @@ export default function App() {
     
     <View style={styles.container}>
       <NavBar/>
-      <ViewPager style={{flex:4.5}} initialPage={0} showPageIndicator={true}	>
+      <ZtpLogo/>
+      <ViewPager style={{flex:4.5}} initialPage={0} showPageIndicator={true}>  
       <MainPage/>
       <View key="1">
         <FirstPage/>

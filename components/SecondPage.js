@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View, Image } from 'react-native';
 import qr_code from '../assets/qr_code.png';
 
+
 function SecondPage() {
   
     

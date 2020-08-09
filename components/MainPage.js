@@ -28,7 +28,7 @@ function MainPage() {
          <Text style={styles.h1}>Kraków ZTP</Text>
          <Text style={styles.h8}>bilet:</Text>
          <Text style={styles.h2}>20 min. N I+II Aglomeracja</Text>
-         <Text style={styles.h9}>termin wazności:</Text>
+         <Text style={styles.h9}>termin ważności:</Text>
          <Text style={styles.h3}>{expDate}</Text>
          <Text style={styles.h9}>Numer biletu:</Text>
          <Text style={styles.h1}>{ticketNumber}</Text>

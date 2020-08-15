@@ -25,7 +25,7 @@ function MainPage() {
 const handleChange = (newState) => {
  if (newState === "active") {
   
-  //Getting current time and adding 10 minutes to current timee
+  //Getting current time and adding 10 minutes to current time
   setExpDate(moment().add(10, 'minutes').format("DD.MM.YYYY HH:mm"))
   //Setting ticket number
   setTicketNumber('KRK 2687'+Math.floor(Math.random() * 999) + 1)

@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, AppState } from 'react-native';
 import moment from "moment";
 
 
@@ -11,15 +11,30 @@ function MainPage() {
   const [ticketNumber, setTicketNumber] = useState('')
   const [transNumber, setTransNumber] = useState('')
   
- useEffect(() => {
-   //Getting current time and adding 10 minutes to current timee
-   setExpDate(moment().add(10, 'minutes').format("DD.MM.YYYY HH:mm"))
-   //Setting ticket number
-   setTicketNumber('KRK 2687'+Math.floor(Math.random() * 999) + 1)
-   //Setting trans number
-   setTransNumber('2030002012115'+Math.floor(Math.random() * 99999) + 1)
- },[]);
   
+ useEffect(() => {
+   
+      AppState.addEventListener('change', handleChange);  
+
+ return () => {
+       AppState.removeEventListener('change', handleChange);  
+ }
+  
+},[]);
+
+const handleChange = (newState) => {
+ if (newState === "active") {
+  
+  //Getting current time and adding 10 minutes to current timee
+  setExpDate(moment().add(10, 'minutes').format("DD.MM.YYYY HH:mm"))
+  //Setting ticket number
+  setTicketNumber('KRK 2687'+Math.floor(Math.random() * 999) + 1)
+  //Setting trans number
+  setTransNumber('2030002012115'+Math.floor(Math.random() * 99999) + 1)
+ }
+}
+
+
     return (
       
     <View style={styles.container}>

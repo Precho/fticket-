@@ -1,5 +1,5 @@
 import React, {useState,useEffect} from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, AppState } from 'react-native';
 import moment from "moment";
 
 function FirstPage() {
@@ -7,12 +7,24 @@ function FirstPage() {
   const [currentDate, setcurrentDate] = useState('')
   const [initNumber, setInitNumber] = useState('')
  useEffect(() => {
-   //Setting current Date - 10 minutes
+   
+   AppState.addEventListener('change', handleChange);  
+
+  return () => {
+    AppState.removeEventListener('change', handleChange);  
+  }
+   
+ },[]);
+ 
+ const handleChange = (newState) => {
+  if (newState === "active") {
+   
+    //Setting current Date - 10 minutes
    setcurrentDate(moment().subtract(10, 'minutes').format("DD.MM.YYYY HH:mm"))
    //Setting Init number
    setInitNumber('9'+Math.floor(Math.random() * 999999) + 1)
-   
- },[]);
+  }
+}
   
     return (
       <View style={styles.container}>

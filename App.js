@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, AppState } from 'react-native';
 import ViewPager from '@react-native-community/viewpager';
 import MainPage from './components/MainPage.js'
 import FirstPage from './components/FirstPage.js';
@@ -9,6 +9,9 @@ import SecondPage from './components/SecondPage.js'
 import ZtpLogo from './components/ZtpLogo.js'
 
 showPageIndicator: true
+
+
+
 export default function App() {
   return (
     

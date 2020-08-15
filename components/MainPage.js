@@ -28,9 +28,9 @@ const handleChange = (newState) => {
   //Getting current time and adding 10 minutes to current time
   setExpDate(moment().add(10, 'minutes').format("DD.MM.YYYY HH:mm"))
   //Setting ticket number
-  setTicketNumber('KRK 2687'+Math.floor(Math.random() * 999) + 1)
+  setTicketNumber('KRK 2687'+Math.floor(Math.random() * 90000) )
   //Setting trans number
-  setTransNumber('2030002012115'+Math.floor(Math.random() * 99999) + 1)
+  setTransNumber('2030002012115'+Math.floor(Math.random() * 99999))
  }
 }
 

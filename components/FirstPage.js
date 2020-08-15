@@ -7,7 +7,10 @@ function FirstPage() {
   const [currentDate, setcurrentDate] = useState('')
   const [initNumber, setInitNumber] = useState('')
  useEffect(() => {
-   
+   //Setting current Date - 10 minutes
+   setcurrentDate(moment().subtract(10, 'minutes').format("DD.MM.YYYY HH:mm"))
+   //Setting Init number
+   setInitNumber('9'+Math.floor(Math.random() * 9999999))
    AppState.addEventListener('change', handleChange);  
 
   return () => {

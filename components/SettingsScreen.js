@@ -29,7 +29,7 @@ export default function SettingsScreen({navigation}) {
         break
       case 3:
         myContext.setCity("Warszawa ZTM")
-        // console.log(myContext.City)
+        // console.log(myContext.Cityy)
         break
 
     }
@@ -73,6 +73,12 @@ export default function SettingsScreen({navigation}) {
       </View>
 
       <Text>{myContext.City}</Text>
+      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'flex-end' }}>
+      <Button
+        onPress={() => navigation.navigate('Home')}
+        title="GoToHomeScreen"
+      />
+    </View>
         
     </View>
   );

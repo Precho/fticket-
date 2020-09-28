@@ -1,6 +1,8 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useContext} from 'react';
 import { StyleSheet, Text, View, AppState } from 'react-native';
 import moment from "moment";
+
+import AppContext from '../components/AppContext';
 
 
 
@@ -10,6 +12,8 @@ function MainPage() {
   const [expDate, setExpDate] = useState('');
   const [ticketNumber, setTicketNumber] = useState('')
   const [transNumber, setTransNumber] = useState('')
+// App context
+  const myContext = useContext(AppContext);
   
   
  useEffect(() => {
@@ -46,7 +50,7 @@ const handleChange = (newState) => {
     <View style={styles.container}>
       <View style={styles.card}>
       <View style={styles.content}>
-         <Text style={styles.h1}>Kraków ZTP</Text>
+         <Text style={styles.h1}>{myContext.City}</Text>
          <Text style={styles.h8}>bilet:</Text>
          <Text style={styles.h2}>20 min. N I+II Aglomeracja</Text>
          <Text style={styles.h9}>termin ważności:</Text>

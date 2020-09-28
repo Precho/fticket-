@@ -2,7 +2,7 @@ import React, {useState, useEffect, useContext} from 'react';
 import { StyleSheet, Text, View, AppState } from 'react-native';
 import moment from "moment";
 
-import AppContext from '../components/AppContext';
+import AppContext from '../components/AppContext.js';
 
 
 

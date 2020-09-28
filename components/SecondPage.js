@@ -1,17 +1,21 @@
-import React from 'react';
+import React, { useState, useContext } from 'react';
 import { StyleSheet, Text, View, Image } from 'react-native';
 import qr_code from '../assets/qr_code.png';
 
+import AppContext from '../components/AppContext.js';
+
 
 function SecondPage() {
-  
-    
+
+  const myContext = useContext(AppContext);
+
+
 
     return (
     <View style={styles.container}>
       <View style={styles.card}>
           <View style={styles.content}>
-          <Text style={styles.h1}>Kraków ZTP</Text>
+          <Text style={styles.h1}>{myContext.City}</Text>
             <View style={styles.center}>
              <Image style={styles.image} source={qr_code}/>
             </View>

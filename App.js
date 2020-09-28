@@ -22,8 +22,8 @@ function HomeScreen({ navigation }) {
     
 <View style={styles.container}>
       <NavBar/>
-      <ZtpLogo/>
-      <ViewPager style={{flex:4.5}} initialPage={0} showPageIndicator={true}>  
+      <ZtpLogo/>  
+      <ViewPager style={{flex:4.5,marginLeft: 2}} initialPage={0} showPageIndicator={true}>  
       <MainPage/>
       <View key="1">
         <FirstPage/>
@@ -77,7 +77,11 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    // backgroundColor: '#fff',
+    backgroundColor: '#fff',
   },
+  box: {
+   
+    
+  }
   
 });

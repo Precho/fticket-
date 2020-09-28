@@ -1,8 +1,12 @@
-import React, {useState,useEffect} from 'react';
+import React, {useState,useEffect,useContext} from 'react';
 import { StyleSheet, Text, View, AppState } from 'react-native';
 import moment from "moment";
 
+import AppContext from '../components/AppContext.js';
+
 function FirstPage() {
+
+  const myContext = useContext(AppContext);
 
   const [currentDate, setcurrentDate] = useState('')
   const [initNumber, setInitNumber] = useState('')
@@ -33,7 +37,7 @@ function FirstPage() {
       <View style={styles.container}>
       <View style={styles.card}>
       <View style={styles.content}>
-      <Text style={styles.h1}>Kraków ZTP</Text>
+      <Text style={styles.h1}>{myContext.City}</Text>
       <Text style={styles.h8}>cena:</Text>
       <Text style={styles.h2}>3.40 PLN</Text>
       <Text style={styles.h9}>numer bieżący:</Text>

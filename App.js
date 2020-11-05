@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { StyleSheet, Text, View, AppState, Button } from 'react-native';
 import ViewPager from '@react-native-community/viewpager';
 import MainPage from './components/MainPage.js'
@@ -9,10 +9,17 @@ import SecondPage from './components/SecondPage.js'
 import ZtpLogo from './components/ZtpLogo.js'
 import SettingsScreen from './components/SettingsScreen'
 
+
+
+
+
 import AppContext from './components/AppContext';
 
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { NavigationContainer } from '@react-navigation/native';
+
+
+
 
 showPageIndicator: true
 function HomeScreen({ navigation }) {
@@ -50,12 +57,10 @@ const Drawer = createDrawerNavigator();
 
 export default function App() {
 
+  
   const [City, setCity] = useState("Kraków ZTP");
 
-  // function cityZmiana(text){
-  //     setCity(text);
-  //     console.log(City)
-  // } 
+   
 
   const userSettings = {
     City: City,

@@ -1,18 +1,47 @@
 
-import React, {useState, useContext} from 'react';
+import React, {useState, useContext, useEffect} from 'react';
 import { StyleSheet, Text, View, AppState, Button, TouchableOpacityn} from 'react-native';
 import { set } from 'react-native-reanimated';
 
 import AppContext from "./AppContext";
 
+import firebase from 'firebase'
+import {firebaseConfig} from '../config'
 
 
 
+
+
+if (!firebase.apps.length){
+  firebase.initializeApp(firebaseConfig)
+}
+// const db = firebase.firestore();
 
 
 
 
 export default function SettingsScreen({navigation}) {
+
+  const [totalNumber, setotalNumber] = useState(0)
+  useEffect(() => {
+    getMoviesFromApi()
+    
+  },[]);
+
+  
+
+  const getMoviesFromApi = () => {
+    return fetch('https://fticket-245dd.firebaseio.com/liczby/liczba.json')
+      .then((response) => response.json())
+      .then((json) => {
+        setotalNumber(json)
+        console.log(totalNumber)
+        
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
  
   const myContext = useContext(AppContext);
   // const [City, setCity] = useState();
@@ -73,11 +102,18 @@ export default function SettingsScreen({navigation}) {
       </View>
 
       <Text>{myContext.City}</Text>
+        <View style={styles.h1}> 
+          <Text>Uratowany przed kontrolą: {totalNumber}</Text>
+          <Button
+            // onPress={}
+            title="Miałem kontrole"
+          />
+        </View>
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'flex-end' }}>
-      <Button
-        onPress={() => navigation.navigate('Home')}
-        title="GoToHomeScreen"
-      />
+          <Button
+            onPress={() => navigation.navigate('Home')}
+            title="GoToHomeScreen"
+          />
     </View>
         
     </View>
@@ -101,6 +137,8 @@ const styles = StyleSheet.create({
   },
   text: {
     marginTop: 30
+  },h1: {
+   marginTop: 200,
   }
   
   

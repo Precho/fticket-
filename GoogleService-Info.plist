@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>626912300719-h0i7dgdganovbnbd31pj200iei7strpd.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.626912300719-h0i7dgdganovbnbd31pj200iei7strpd</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDRK5C2DgURyIf_RcX5qhxjCkh76QnS-14</string>
+	<key>GCM_SENDER_ID</key>
+	<string>626912300719</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>pl.natonek</string>
+	<key>PROJECT_ID</key>
+	<string>fticket-245dd</string>
+	<key>STORAGE_BUCKET</key>
+	<string>fticket-245dd.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:626912300719:ios:5463e5c22f6ddb50008e5a</string>
+	<key>DATABASE_URL</key>
+	<string>https://fticket-245dd.firebaseio.com</string>
+</dict>
+</plist>
